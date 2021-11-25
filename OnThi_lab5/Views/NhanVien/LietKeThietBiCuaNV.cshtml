@@ -1,0 +1,36 @@
+﻿@model List<OnThi_lab5.Models.NVBTModel>
+@{
+    ViewData["Title"] = "Liệt kê Thiết bị Của Nhân Viên Đã Sửa";
+}
+<p>Danh sách thiết bị của nhân viên được chọn sửa</p>
+<table border="1">
+    <tr>
+        <th>Mã Thiết Bị</th>
+        <th>Mã Căn Hộ</th>
+        <th>Lần Thứ</th>
+        <th>Ngày Bảo Trì</th>
+        <th>Chức Năng</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @item.maThietBi
+            </td>
+            <td>
+                @item.maCanHo
+            </td>
+            <td>
+                @item.lanThu
+
+            </td>
+            <td>
+                @item.ngayBaoTri
+            </td>
+            <td>
+                <a href="XoaThietBiByNV?Id=@item.maThietBi">Delete</a>
+                <a href="XemThietBiByNV?Id=@item.maThietBi">View</a>
+            </td>
+        </tr>
+    }
+</table>

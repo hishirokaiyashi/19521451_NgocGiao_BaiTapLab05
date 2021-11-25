@@ -1,0 +1,11 @@
+﻿@model OnThi_lab5.Models.NVBTModel
+@{
+    ViewData["Title"] = "Liệt kê Thiết bị Cân Sửa";
+}
+<form action="/NhanVien/" method="POST">
+    <label for="Mathietbi">Mã Thiết bị </label><input type="text" name="maThietBi" value=@Model.maThietBi /><br />
+    <label for="Tencanho">Mã Căn Hộ </label><input type="text" name="maCanHo" value=@Model.maCanHo /><br />
+    <label for="Lansua">Lần Sửa </label><input type="text" name="lanThu" value=@Model.lanThu /><br />
+    <label for="Ngaysua">Ngày Sửa </label><input type="date" name="ngayBaoTri" value=@Model.ngayBaoTri /><br />
+    <input type="submit" name="submit" value="Update" id="update" />
+</form>

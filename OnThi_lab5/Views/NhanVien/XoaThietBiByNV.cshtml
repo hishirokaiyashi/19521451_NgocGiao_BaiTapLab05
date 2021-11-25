@@ -1,0 +1,11 @@
+﻿@{
+    ViewData["title"] = "thông báo kết quả.";
+}
+@{
+    @*<p>@ViewData["thongbao"]</p>*@
+    int[] count = ViewData["thongbao"] as int[];
+    <p>@count[0]  căn hộ </p>
+    <p>@count[1]  thiết bị </p>
+    <p>@count[2]  nhân viên </p>
+    <p>@count[3]  thiết bị bởi nhân viên </p>
+}
